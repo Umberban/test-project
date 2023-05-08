@@ -11,7 +11,7 @@ export const Tweets = () => {
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    if (page >= 5) {
+    if (page > 5) {
         toast("Wow you`ve reached the end !", {
             position: "top-center",
             hideProgressBar: false,
