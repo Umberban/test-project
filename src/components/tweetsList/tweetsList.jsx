@@ -11,7 +11,7 @@ export const Tweets = () => {
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    if (page >= 5) {
+    if (page >= 4) {
         toast("Wow you`ve reached the end !", {
             position: "top-center",
             hideProgressBar: false,
@@ -49,7 +49,7 @@ export const Tweets = () => {
             <TweetCard key={nanoid()} tweetCard={user} />
           ))}
         </ul>
-        {users.length < 15 && (
+        {users.length < 12 && (
           <button className={css.btn} onClick={loadMore}>Load more</button>
         )}
       </div>
