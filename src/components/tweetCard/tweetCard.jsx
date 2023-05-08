@@ -11,12 +11,11 @@ export const TweetCard = ({ tweetCard }) => {
       ? JSON.parse(window.localStorage.getItem(`followStatus:${id}`))
       : { id, status: false }
   );
-  const { status } = followStatus;
-
+  
   useEffect(() => {
     localStorage.setItem(`followStatus:${id}`, JSON.stringify(followStatus));
   }, [followStatus,id]);
-
+  
   const changeHander = async () => {
     setfollowStatus(prevState => {
       return (prevState = {
@@ -34,6 +33,7 @@ export const TweetCard = ({ tweetCard }) => {
       });
     });
   };
+  const { status } = followStatus;
   return (
     <>
       <div>
