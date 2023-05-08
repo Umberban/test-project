@@ -37,10 +37,10 @@
     line-height: 22px;
     text-transform: uppercase;
     color: #373737;
-    transition: background-color 200ms linear;
+    transition: background-color 200ms ease;
 
 }
-.btn:hover,.btn:focus{
+.btn:hover{
     background-color: #5cd3a8;
 }
 .btn__active{
@@ -57,7 +57,10 @@
     line-height: 22px;
     text-transform: uppercase;
     color: #373737;
-    transition: background-color 200ms linear;
+    transition: background-color 200ms ease;
+}
+.btn__active:hover{
+    background-color: #EBD8FF;
 }
 .text{
     font-family: 'Montserrat';

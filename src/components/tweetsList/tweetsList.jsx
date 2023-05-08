@@ -25,7 +25,6 @@ export const Tweets = () => {
             setIsLoading(false)
     }
     getUsers(page).then(user => {
-        console.log(page)
         if (page === 1) {
             setUsers(() => {
                 setIsLoading(false)
