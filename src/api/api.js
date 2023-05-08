@@ -2,7 +2,7 @@ import axios from 'axios';
 const BASE_URL = 'https://6458fa234eb3f674df8301e9.mockapi.io/users'
 export async function getUsers(page) {
   try {
-    const response = await axios.get(`${BASE_URL}?page=${page}&limit=3`);
+    const response = await axios.get(`${BASE_URL}?page=${page}&limit=4`);
     return response.data;
   } catch (error) {
     console.log(error)
