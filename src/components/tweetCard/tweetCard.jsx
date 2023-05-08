@@ -17,15 +17,14 @@ export const TweetCard = ({ tweetCard }) => {
     localStorage.setItem(`followStatus:${id}`, JSON.stringify(followStatus));
   }, [followStatus,id]);
 
-  const changeBtn = async () => {
+  const changeHander = async () => {
     setfollowStatus(prevState => {
       return (prevState = {
         id,
         status: !status,
       });
     });
-  
-    let updateFollowers = {
+    const updateFollowers = {
       followers: changeFollowersValue(followers,status),
     };
     await changeFollowers(id, updateFollowers);
@@ -44,11 +43,11 @@ export const TweetCard = ({ tweetCard }) => {
         <p>Tweets:{tweets} </p>
         <p>Followers:{followers} </p>
         {!status ? (
-          <button type="button" status={status.toString()} onClick={changeBtn}>
+          <button type="button" status={status.toString()} onClick={changeHander}>
             Follow
           </button>
         ) : (
-          <button type="button" status={status.toString()} onClick={changeBtn}>
+          <button type="button" status={status.toString()} onClick={changeHander}>
             Following
           </button>
         )}
